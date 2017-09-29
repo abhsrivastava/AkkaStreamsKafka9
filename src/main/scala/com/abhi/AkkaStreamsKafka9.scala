@@ -22,13 +22,13 @@ object AkkaStreamsKafka9 extends App {
    val kafka = new ReactiveKafka()
 
    val props = Map[String, String](
-      "bootstrap.servers" -> "upladevnka01v.researchnow.com:9092,upladevnka02v.researchnow.com:9092",
+      "bootstrap.servers" -> "foo:9092",
       "auto.offset.reset" -> "latest",
       "group.id" -> "abhi"
    )
    val consumerProperties = ConsumerProperties(
       params = props,
-      topic = "nova-scribe-dev",
+      topic = "my-topic",
       groupId = "abhi",
       keyDeserializer = new ByteArrayDeserializer(),
       valueDeserializer = new StringDeserializer()
