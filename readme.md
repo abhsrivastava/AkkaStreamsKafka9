@@ -1,0 +1,1 @@
+Sample to create a Akka Streams Source from Kafka 0.9 and below
